@@ -1,26 +1,18 @@
-//import "./App.css"; //주석처리하고 inline 으로 style 적용 해볼 수 있다.
-import MyHeader from "./MyHeader";
-import MyFooter from "./MyFooter";
-import Counter from "./Counter";
-import Container from "./Container";
-function App() {
-  const num = 5;
-  const counterProps = {
-    a: 1,
-    b: 2,
-    c: 3,
-    d: 4,
-    e: 5,
-  };
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./pages/About";
+import Home from "./pages/Home";
 
+function App() {
   return (
-    <Container>
+    <BrowserRouter>
       <div>
-        <MyHeader />
-        <Counter {...counterProps} />
+        <h1>페이지가 변해도 그대로 유지되는 부분</h1>
       </div>
-    </Container>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;
