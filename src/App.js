@@ -1,12 +1,13 @@
 import ColorBox from "./components/ColorBox";
-import ColorContext from "./contexts/colors";
+import { ColorProvider } from "./contexts/ColorContext";
 
 function App() {
   return (
-    <ColorContext.Provider value={{ color: "red" }}>
-      <h2>Context API 예제</h2>
-      <ColorBox />
-    </ColorContext.Provider>
+    <ColorProvider>
+      <div>
+        <ColorBox />
+      </div>
+    </ColorProvider>
   );
 }
 export default App;
