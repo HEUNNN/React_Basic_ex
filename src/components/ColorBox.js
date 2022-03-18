@@ -1,14 +1,14 @@
-import ColorContexts from "../contexts/colors";
+import ColorContext from "../contexts/colors";
 
 const ColorBox = () => {
   return (
-    <ColorContexts.Consumer>
+    <ColorContext.Consumer>
       {(value) => (
         <div
           style={{ width: "64px", height: "64px", background: value.color }}
         />
       )}
-    </ColorContexts.Consumer>
+    </ColorContext.Consumer>
   );
 };
 export default ColorBox;
