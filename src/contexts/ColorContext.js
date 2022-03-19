@@ -11,11 +11,11 @@ const ColorContext = createContext({
 
 const ColorProvider = ({ children }) => {
   const [color, setColor] = useState("orange");
-  const [subcolor, setSubcolor] = useState("yellow");
+  const [subcolor, setSubColor] = useState("yellow");
 
   const value = {
     state: { color, subcolor },
-    action: { setColor, setSubcolor },
+    action: { setColor, setSubColor },
   };
 
   return (
