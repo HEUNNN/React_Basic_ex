@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-//context 파일
+//context 파일 -> Consumer 가 사용할 데이터를 보유하고 있는 context 파일
 const ColorContext = createContext({
   state: { color: "black", subcolor: "red" },
   action: {

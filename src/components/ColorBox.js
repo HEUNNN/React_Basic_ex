@@ -1,4 +1,5 @@
 import { ColorConsumer } from "../contexts/ColorContext";
+//context 파일에서 값을 받아와서 사용하는 컴포넌트 -> Consumer
 const ColorBox = () => {
   return (
     <ColorConsumer>
